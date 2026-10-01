@@ -1,0 +1,340 @@
+/* =========================================
+   COURTSIDE SIX — LIVE TV BOARD
+========================================= */
+
+.tv-board {
+    min-height: 100vh;
+  
+    padding: 42px 52px;
+  
+    background: #f6f5ef;
+  
+    color: #071a2d;
+  }
+  
+  
+  /* =========================================
+     HEADER
+  ========================================= */
+  
+  .tv-header {
+    display: flex;
+  
+    align-items: flex-end;
+  
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    margin-bottom: 34px;
+  }
+  
+  .tv-eyebrow {
+    margin: 0 0 8px;
+  
+    color: #167fa5;
+  
+    font-size: 0.72rem;
+  
+    font-weight: 900;
+  
+    letter-spacing: 0.2em;
+  }
+  
+  .tv-header h1 {
+    margin: 0;
+  
+    color: #071a2d;
+  
+    font-size: clamp(2rem, 4vw, 4.2rem);
+  
+    line-height: 0.95;
+  
+    letter-spacing: -0.045em;
+  }
+  
+  .tv-live-indicator {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 9px;
+  
+    padding: 10px 16px;
+  
+    border: 1px solid #dce2e6;
+  
+    border-radius: 999px;
+  
+    background: #ffffff;
+  
+    color: #071a2d;
+  
+    font-size: 0.7rem;
+  
+    font-weight: 900;
+  
+    letter-spacing: 0.12em;
+  
+    box-shadow:
+      0 6px 18px rgba(7, 26, 45, 0.05);
+  }
+  
+  .tv-live-dot {
+    width: 9px;
+    height: 9px;
+  
+    border-radius: 50%;
+  
+    background: #70c95d;
+  
+    box-shadow:
+      0 0 12px rgba(112, 201, 93, 0.35);
+  }
+  
+  
+  /* =========================================
+     NOW CALLING
+  ========================================= */
+  
+  .tv-calling-banner {
+    margin-bottom: 32px;
+  
+    padding: clamp(28px, 4vw, 50px);
+  
+    background: #f5d928;
+  
+    color: #071a2d;
+  
+    border-radius: 24px;
+  
+    box-shadow:
+      0 18px 40px rgba(7, 26, 45, 0.08);
+  
+    animation: tvCallingIn 0.3s ease both;
+  }
+  
+  @keyframes tvCallingIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .tv-calling-banner p {
+    margin: 0 0 5px;
+  
+    font-size: 0.7rem;
+  
+    font-weight: 900;
+  
+    letter-spacing: 0.18em;
+  }
+  
+  .tv-calling-banner h2 {
+    margin: 0;
+  
+    font-size: clamp(3rem, 7vw, 7rem);
+  
+    line-height: 0.88;
+  
+    letter-spacing: -0.055em;
+  }
+  
+  .tv-calling-players {
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    gap: 8px;
+  
+    margin-top: 25px;
+  }
+  
+  .tv-calling-players span {
+    padding: 10px 13px;
+  
+    border-radius: 999px;
+  
+    background: rgba(255, 255, 255, 0.68);
+  
+    font-size: clamp(0.9rem, 1.4vw, 1.2rem);
+  
+    font-weight: 800;
+  }
+  
+  .tv-calling-banner strong {
+    display: block;
+  
+    margin-top: 28px;
+  
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+  
+    letter-spacing: 0.12em;
+  }
+  
+  
+  /* =========================================
+     COURTS
+  ========================================= */
+  
+  .tv-courts-grid {
+    display: grid;
+  
+    grid-template-columns: repeat(3, 1fr);
+  
+    gap: 14px;
+  }
+  
+  .tv-court-card {
+    min-height: 210px;
+  
+    padding: 24px;
+  
+    background: #ffffff;
+  
+    border: 1px solid #dce2e6;
+  
+    border-radius: 18px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    box-shadow:
+      0 8px 24px rgba(7, 26, 45, 0.045);
+  
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease;
+  }
+  
+  .tv-court-card:hover {
+    transform: translateY(-3px);
+  
+    box-shadow:
+      0 14px 30px rgba(7, 26, 45, 0.08);
+  }
+  
+  .tv-court-header {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 15px;
+  
+    padding-bottom: 16px;
+  
+    border-bottom: 1px solid #e7ebed;
+  }
+  
+  .tv-court-header span {
+    font-size: 1rem;
+  
+    font-weight: 900;
+  
+    letter-spacing: 0.06em;
+  }
+  
+  .tv-court-header strong {
+    font-size: 0.62rem;
+  
+    letter-spacing: 0.1em;
+  }
+  
+  .tv-player-list {
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 7px;
+  
+    margin-top: 20px;
+  }
+  
+  .tv-player-list span {
+    padding: 10px;
+  
+    border-radius: 10px;
+  
+    background: #f6f5ef;
+  
+    color: #304658;
+  
+    font-size: 0.82rem;
+  
+    font-weight: 700;
+  }
+  
+  .tv-empty-court {
+    margin: auto 0 0;
+  
+    padding-top: 25px;
+  
+    color: #8a969e;
+  
+    font-size: 0.8rem;
+  }
+  
+  
+  /* =========================================
+     COURT STATUS
+  ========================================= */
+  
+  .tv-status-available {
+    border-top: 5px solid #70c95d;
+  }
+  
+  .tv-status-in-progress {
+    border-top: 5px solid #071a2d;
+  }
+  
+  .tv-status-calling-players {
+    border-top: 5px solid #f5d928;
+  
+    box-shadow:
+      0 12px 30px rgba(245, 217, 40, 0.14);
+  }
+  
+  
+  /* =========================================
+     RESPONSIVE
+  ========================================= */
+  
+  @media (max-width: 900px) {
+    .tv-board {
+      padding: 30px;
+    }
+  
+    .tv-courts-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .tv-board {
+      padding: 20px;
+    }
+  
+    .tv-header {
+      align-items: flex-start;
+  
+      flex-direction: column;
+    }
+  
+    .tv-courts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .tv-calling-banner {
+      border-radius: 18px;
+    }
+  }
