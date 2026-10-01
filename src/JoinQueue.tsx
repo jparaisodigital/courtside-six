@@ -1,10 +1,9 @@
 import { useState } from "react";
 import {
-  DEMO_STATE_KEY,
-  loadDemoState,
-  saveDemoState,
-  type DemoPlayer,
-} from "./demoState";
+    loadDemoState,
+    saveDemoState,
+    type DemoPlayer,
+  } from "./demoState";
 import "./JoinQueue.css";
 
 type EntryType = "Solo" | "Locked Pair";
